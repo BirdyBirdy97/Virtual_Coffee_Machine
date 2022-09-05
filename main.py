@@ -26,11 +26,11 @@ def coffee_served(coffee_type, argent):
         change_back = "{:.2f}".format(m_total - cost)
         clear()
         print(logo)
-        print(f"\nHere's your {coffee_type} and {change_back}$ change, enjoy!")
+        print(f"\nHere's your {coffee_type} ☕ and {change_back}$ change, enjoy!")
     elif m_total == cost:
         clear()
         print(logo)
-        print(f"\nHere's your {coffee_type}, enjoy!")
+        print(f"\nHere's your {coffee_type} ☕, enjoy!")
         argent += cost
     else:
         clear()
@@ -51,7 +51,8 @@ def coffee_maker():
     water = 600
     milk = 400
     coffee = 200
-    money = "{:.2f}".format(0)
+    money = 0
+    money_decimals = "{:.2f}".format(money)
 
     while run:
         print("\nGood day!")
@@ -81,7 +82,7 @@ def coffee_maker():
         elif coffee_type == "report":
             clear()
             print(logo)
-            check_levels(water, coffee, milk, money)
+            check_levels(water, coffee, milk, money_decimals)
         elif coffee_type == "refill":
             clear()
             print(logo)
