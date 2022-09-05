@@ -9,13 +9,10 @@ def clear():
 
 
 def money_inserted():
-    quarter = float(input("\nHow many quarters?: "))
+    quarter = float(input("\nHow many quarters?: ")) * 0.25
     loonie = float(input("How many loonies?: "))
-    toonie = float(input("How many toonies?: "))
-    quarter_total = quarter * 0.25
-    loonie_total = loonie
-    toonie_total = toonie * 2
-    total = quarter_total + loonie_total + toonie_total
+    toonie = float(input("How many toonies?: ")) * 2
+    total = quarter + loonie + toonie
     return total
 
 
