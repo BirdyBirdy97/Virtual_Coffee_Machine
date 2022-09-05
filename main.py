@@ -23,7 +23,7 @@ def coffee_served(coffee_type, argent):
     cost = menu[coffee_type]["price"]
     m_total = money_inserted()
     if m_total > cost:
-        change_back = m_total - cost
+        change_back = "{:.2f}".format(m_total - cost)
         clear()
         print(logo)
         print(f"\nHere's your {coffee_type} and {change_back}$ change, enjoy!")
@@ -51,7 +51,7 @@ def coffee_maker():
     water = 600
     milk = 400
     coffee = 200
-    money = 0
+    money = "{:.2f}".format(0)
 
     while run:
         print("\nGood day!")
